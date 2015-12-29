@@ -1,32 +1,37 @@
-<html xmlns="http://www.w3.org/1999/xhtml"  
-    xmlns:h="http://java.sun.com/jsf/html"  
-    xmlns:f="http://java.sun.com/jsf/core"  
-    xmlns:p="http://primefaces.org/ui">  
-  
-    <h:head>  
-    	<meta charset="UTF-8" />
-  		<title>Mysite</title>
-  		<script src="JS/prefixfree.min.js"></script>
-  		<script src="JS/jquery.mim.js"></script>
-  		<link rel="stylesheet" href="folha_de_estilo/normalize.css" />
-  		<link rel="stylesheet" href="folha_de_estilo/estilo_padrao.css" />
-    </h:head>  
-      
-    <h:body> 
-      <div class="container">
-       <h1><a href="">Titulo site</a></h1>
-       <div class="container_titulo">
-       
- 
-       	<p>
-       		<div id="autor">
-	       		<h3><a href="https://www.facebook.com/michel.soares.777" target="_blank" title="fb/michel.soares.777">
-	       		<h:outputLabel id="label_autor" value="Michel Soares"/></a></h3>
-	       	</div>
-       	</p>
-       
-       </div>
-       <nav id="menu">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="UTF-8" />
+	<title>Mysite</title>
+	<script src="JS/prefixfree.min.js"></script>
+	<script src="JS/jquery.mim.js"></script>
+	<link rel="stylesheet" href="folha_de_estilo/normalize.css" />
+	<link rel="stylesheet" href="folha_de_estilo/estilo_padrao.css" />
+</h:head>
+
+<h:body>
+	<div class="container">
+		<h1>
+			<a href="">Titulo site</a>
+		</h1>
+		<div class="container_titulo">
+
+
+			<p>
+			<div id="autor">
+				<h3>
+					<a href="https://www.facebook.com/michel.soares.777"
+						target="_blank" title="fb/michel.soares.777"> <h:outputLabel
+							id="label_autor" value="Michel Soares" /></a>
+				</h3>
+			</div>
+			</p>
+
+		</div>
+		<nav id="menu">
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Quem sou</a></li>
@@ -35,28 +40,34 @@
 				<li><a href="#">Objetivos</a></li>
 			</ul>
 		</nav>
-		
-		<aside>
-			<h:form>
+
+		<aside id="login">
+			<h:form id="login_usuario">
 				<h:panelGrid id="loginSenha" columns="2">
-					<h:outputText id="label_usuario" value="Usuário: "/>
-					<h:inputText id="usuario" value=""/>
-					
-					<h:outputText id="label_senha" value="Senha: "/>
-					<h:inputSecret id="senha" value=""/>	
-					
-					<p:commandButton value="Entrar"/>
-					<p:commandButton value="Cadastro"/>
+					<h:outputText id="label_usuario" value="Usuário: " />
+					<h:inputText id="usuario" value="" />
+
+					<h:outputText id="label_senha" value="Senha: " />
+					<h:inputSecret id="senha" value="" />
+
+					<p:commandButton value="Entrar" />
+					<p:commandButton value="Cadastro" />
 				</h:panelGrid>
 			</h:form>
 		</aside>
+
+		<article id="slide_show">
+			<!-- Slide Show -->
+			<p:contentFlow value="#{slide_show.images}" var="image">
+				<p:graphicImage name="nature_/#{image}" styleClass="content" />
+				<div class="caption">#{image}</div>
+			</p:contentFlow>
+		</article>
 		
-		<!-- Slide Show -->
-		<p:contentFlow value="#{slide_show.images}" var="image">
-    		<p:graphicImage name="nature_/#{image}" styleClass="content" />
-    		<div class="caption">#{image}</div>
-		</p:contentFlow>
+		<aside class="publicidade_01">
 		
-      </div>
-    </h:body>  
-</html> 
+		</aside>
+		
+	</div>
+</h:body>
+</html>

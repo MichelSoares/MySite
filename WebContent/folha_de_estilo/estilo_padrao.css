@@ -4,12 +4,23 @@ body {
 	line-height: 1.6;
 }
 
-aside{
-	background-color: #FFFBE4;
+#login{
+	margin: 10px;
+	background-color: #808080;
 	border: 1px solid #C9BC8F;
 	float: right;
 	padding: 10px;
 	width: 300px;
+}
+
+.publicidade_01{
+	background-image: url(img/tela_principal_vertical.png);
+	margin: 10px;
+	float: right;
+	width: 300px;
+	margin-bottom: 10px;
+	height: 700px;
+	
 }
 
 .container {
@@ -71,3 +82,13 @@ h1 a {
 	color: #404040;
 	text-decoration: none;
 }
+
+
+
+#slide_show {
+	margin: 10px;
+	height: auto;
+	width: 840px;
+	
+}
+
