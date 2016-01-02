@@ -30,6 +30,7 @@ public class UsuarioPreferencias implements Serializable{
 	private boolean programacao;
 	private boolean carreira;
 	private boolean internet;
+	
 
 	public boolean isMobilidade() {
 		return mobilidade;

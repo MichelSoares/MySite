@@ -3,15 +3,19 @@ package br.com.myplace.entidades;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
 
 @Entity
 @Table(name="tb_usuario")
@@ -23,6 +27,14 @@ public class Usuario implements Serializable{
 	@SequenceGenerator(name = "SEG_USUARIO", sequenceName = "SEG_USUARIO", allocationSize = 1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEG_USUARIO")
 	private Long id;
+	
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="id_usuario_ocupacao", referencedColumnName="id")
+	private UsuarioOcupacao usuarioOcupacao;
+
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="id_usu_preferencias", referencedColumnName="id")
+	private UsuarioPreferencias usuarioPreferencias;
 	
 	@Column (nullable = false)
 	private String nome;
@@ -59,7 +71,6 @@ public class Usuario implements Serializable{
 	
 	public Usuario(Long id, String nome, String sobreNome, char sexo, Date nascimento, String grauEscolaridade,
 			String pais, String email, String senha, String fraseLembraSenha) {
-		super();
 		this.id = id;
 		this.nome = nome;
 		this.sobreNome = sobreNome;
