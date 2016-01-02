@@ -1,5 +1,7 @@
 package br.com.myplace.entidades;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,8 +10,10 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="tb_usuario_preferencias")
-public class UsuarioPreferencias {
+public class UsuarioPreferencias implements Serializable{
 
+	private static final long serialVersionUID = 39759312436586044L;
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;

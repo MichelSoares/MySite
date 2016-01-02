@@ -1,5 +1,6 @@
 package br.com.myplace.entidades;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -14,7 +15,9 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="tb_usuario")
-public class Usuario {
+public class Usuario implements Serializable{
+
+	private static final long serialVersionUID = 5229962052502555225L;
 
 	@Id
 	@SequenceGenerator(name = "SEG_USUARIO", sequenceName = "SEG_USUARIO", allocationSize = 1)
