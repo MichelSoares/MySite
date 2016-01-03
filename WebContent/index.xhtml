@@ -1,7 +1,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
 	<meta charset="UTF-8" />
@@ -40,30 +41,31 @@
 				<li><a href="#">Objetivos</a></li>
 			</ul>
 		</nav>
-
-		<aside id="login">
-			<h:form id="login_usuario">
-				<h:panelGrid id="loginSenha" columns="2">
-					<h:outputText id="label_usuario" value="Usuário: " />
-					<h:inputText id="usuario" value="" />
-
-					<h:outputText id="label_senha" value="Senha: " />
-					<h:inputSecret id="senha" value="" />
-
-					<p:commandButton value="Entrar" />
-					<p:commandButton value="Cadastro" />
-				</h:panelGrid>
-			</h:form>
-		</aside>
-
-		<article id="slide_show">
-			<!-- Slide Show -->
-			<p:contentFlow value="#{slide_show.images}" var="image">
-				<p:graphicImage name="nature_/#{image}" styleClass="content" />
-				<div class="caption">#{image}</div>
-			</p:contentFlow>
-		</article>
-		
+		<ui:insert name="campo_de_login">
+			<aside id="login">
+				<h:form id="login_usuario">
+					<h:panelGrid id="loginSenha" columns="2">
+						<h:outputText id="label_usuario" value="Usuário: " />
+						<h:inputText id="usuario" value="" />
+	
+						<h:outputText id="label_senha" value="Senha: " />
+						<h:inputSecret id="senha" value="" />
+	
+						<h:commandButton id="bt_entrar" value="Entrar" />
+						<h:commandButton id="bt_cadastro" value="Cadastro" action="#{cadastroMB.irParaTelaCadastro}"/>
+					</h:panelGrid>
+				</h:form>
+			</aside>
+		</ui:insert>
+		<ui:insert name="conteudo">
+			<article id="slide_show">
+				<!-- Slide Show -->
+				<p:contentFlow value="#{slide_show.images}" var="image">
+					<p:graphicImage name="nature_/#{image}" styleClass="content" />
+					<div class="caption">#{image}</div>
+				</p:contentFlow>
+			</article>
+		</ui:insert>
 		<aside class="publicidade_01">
 		
 		</aside>
