@@ -19,9 +19,6 @@
 			<a href="">Titulo site</a>
 		</h1>
 		<div class="container_titulo">
-
-
-			<p>
 			<div id="autor">
 				<h3>
 					<a href="https://www.facebook.com/michel.soares.777"
@@ -29,8 +26,6 @@
 							id="label_autor" value="Michel Soares" /></a>
 				</h3>
 			</div>
-			</p>
-
 		</div>
 		<nav id="menu">
 			<ul>
@@ -41,15 +36,15 @@
 				<li><a href="#">Objetivos</a></li>
 			</ul>
 		</nav>
-		<ui:insert name="campo_de_login">
+		<ui:insert name="campo-de-login">
 			<aside id="login">
 				<h:form id="login_usuario">
 					<h:panelGrid id="loginSenha" columns="2">
 						<h:outputText id="label_usuario" value="Usuário: " />
-						<h:inputText id="usuario" value="" />
+						<h:inputText id="usuario" value="#{usuarioMB.usuario.nome}" />
 	
 						<h:outputText id="label_senha" value="Senha: " />
-						<h:inputSecret id="senha" value="" />
+						<h:inputSecret id="senha" value="#{usuarioMB.usuario.senha}" />
 	
 						<h:commandButton id="bt_entrar" value="Entrar" />
 						<h:commandButton id="bt_cadastro" value="Cadastro" action="#{cadastroMB.irParaTelaCadastro}"/>
@@ -67,9 +62,7 @@
 			</article>
 		</ui:insert>
 		<aside class="publicidade_01">
-		
 		</aside>
-		
 	</div>
 </h:body>
 </html>

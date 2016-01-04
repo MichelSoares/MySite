@@ -7,7 +7,7 @@ public class CadastroMB {
 
 	
 	public String irParaTelaCadastro(){
-		return "cadastro_usuario";
+		return "cadastro";
 	}
 	
 	
