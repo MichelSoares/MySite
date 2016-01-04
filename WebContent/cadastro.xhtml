@@ -11,7 +11,29 @@
    	</ui:define>
    
    	<ui:define name="conteudo">
-   		<h1><h:outputLabel value="Campos para cadastro de Usuário"/></h1>
+   		<h1><h:outputLabel value="Cadastro de Usuário"/></h1>
+   		<h:form id="form_cadastro">
+   			<h:panelGrid id="grid_cadastro" columns="2">
+   				<h:outputLabel value="Nome: "/>
+   				<h:inputText id="nome_cadastro" value=""/>
+   				
+   				<h:outputLabel value="Sobrenome: "/>
+   				<h:inputText id="sobrenome_cadastro" value=""/>
+   				
+   				
+   				<!-- ComboBox -->
+   				<h:selectOneMenu value="">
+   				<h:outputLabel value="Sexo: "/>
+   					<f:selectItem itemLabel="-- Selecione --" noSelectionOption="true" />
+   					<f:selectItem itemLabel="Masculino"/>
+   					<f:selectItem itemLabel="Feminino"/>
+   				</h:selectOneMenu>
+   				
+   				<h:outputLabel value="Nascimento: "/>
+   				<h:inputText id="nasc_cadastro" value=""/>
+   				
+   			</h:panelGrid>
+   		</h:form>
    	</ui:define>
    </ui:composition>   
 </html> 
