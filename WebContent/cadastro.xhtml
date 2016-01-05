@@ -25,16 +25,22 @@
 	   	 <div class="place-1">
 	   	 <strong><h3><h:outputLabel value="Quem é você?"/></h3></strong>
 	   		<h:form id="form_cadastro">
-	   			<h:panelGrid id="grid_cadastro" columns="2">
+	   			<h:panelGrid id="grid_cadastro" columns="4" border="1" cellpadding="10">
 	   				<h:outputLabel value="Nome: "/>
+	   				
+	   				
+	   				
+	   				
 	   				<h:inputText id="nome_cadastro" value="" size="30"/>
 	   				
+	   				
 	   				<h:outputLabel value="Sobrenome: "/>
+	   				
 	   				<h:inputText id="sobrenome_cadastro" value="" size="30"/>
 	   				
 	   				
 	   				<!-- ComboBox -->
-	   				<h:selectOneMenu value="">
+	   				<h:selectOneMenu value="" >
 	   				<h:outputLabel value="Sexo: "/>
 	   					<f:selectItem itemLabel="-- Selecione --" noSelectionOption="true" />
 	   					<f:selectItem itemLabel="Masculino"/>
