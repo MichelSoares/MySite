@@ -4,15 +4,16 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
 
-<h:head>
-	<meta charset="UTF-8" />
-	<title>Mysite</title>
-	<script src="JS/prefixfree.min.js"></script>
-	<script src="JS/jquery.mim.js"></script>
-	<link rel="stylesheet" href="folha_de_estilo/normalize.css" />
-	<link rel="stylesheet" href="folha_de_estilo/estilo_padrao.css" />
-</h:head>
-
+<ui:insert name="cabecalho">
+	<h:head>
+		<meta charset="UTF-8" />
+		<title>Mysite</title>
+		<script src="JS/prefixfree.min.js"></script>
+		<script src="JS/jquery.mim.js"></script>
+		<link rel="stylesheet" href="CSS/normalize.css" />
+		<link rel="stylesheet" href="CSS/estilo_padrao.css" />
+	</h:head>
+</ui:insert>
 <h:body>
 	<div class="container">
 		<h1>

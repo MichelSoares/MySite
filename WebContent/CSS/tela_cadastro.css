@@ -1,0 +1,14 @@
+.place-1 {
+	background-color: #eae3d5;
+	border-color: #CCC #999 #999 #CCC;
+	border: 1px solid #CCC;
+	margin-bottom: 20px;
+	padding: 10px;
+	margin-right: 380px;
+}
+
+.place-1 h3{
+	border-bottom: 1px dashed #0080ff;
+	margin: 0;
+	margin-bottom: 15px;
+}

@@ -5,35 +5,48 @@
     xmlns:ui="http://java.sun.com/jsf/facelets"> 
     
    <ui:composition template="/index.xhtml"> 
-   
+ 
+   <ui:define name="cabecalho">
+   <meta charset="UTF-8" />
+		<title>Mysite</title>
+		<script src="JS/prefixfree.min.js"></script>
+		<script src="JS/jquery.mim.js"></script>
+		<link rel="stylesheet" href="CSS/normalize.css" />
+		<link rel="stylesheet" href="CSS/estilo_padrao.css" />
+   		<link rel="stylesheet" href="CSS/tela_cadastro.css" />
+   </ui:define>
+ 
    <ui:define name="campo-de-login">
    		teste
    	</ui:define>
    
    	<ui:define name="conteudo">
    		<h1><h:outputLabel value="Cadastro de Usuário"/></h1>
-   		<h:form id="form_cadastro">
-   			<h:panelGrid id="grid_cadastro" columns="2">
-   				<h:outputLabel value="Nome: "/>
-   				<h:inputText id="nome_cadastro" value=""/>
-   				
-   				<h:outputLabel value="Sobrenome: "/>
-   				<h:inputText id="sobrenome_cadastro" value=""/>
-   				
-   				
-   				<!-- ComboBox -->
-   				<h:selectOneMenu value="">
-   				<h:outputLabel value="Sexo: "/>
-   					<f:selectItem itemLabel="-- Selecione --" noSelectionOption="true" />
-   					<f:selectItem itemLabel="Masculino"/>
-   					<f:selectItem itemLabel="Feminino"/>
-   				</h:selectOneMenu>
-   				
-   				<h:outputLabel value="Nascimento: "/>
-   				<h:inputText id="nasc_cadastro" value=""/>
-   				
-   			</h:panelGrid>
-   		</h:form>
+	   	 <div class="place-1">
+	   	 <strong><h3><h:outputLabel value="Quem é você?"/></h3></strong>
+	   		<h:form id="form_cadastro">
+	   			<h:panelGrid id="grid_cadastro" columns="2">
+	   				<h:outputLabel value="Nome: "/>
+	   				<h:inputText id="nome_cadastro" value="" size="30"/>
+	   				
+	   				<h:outputLabel value="Sobrenome: "/>
+	   				<h:inputText id="sobrenome_cadastro" value="" size="30"/>
+	   				
+	   				
+	   				<!-- ComboBox -->
+	   				<h:selectOneMenu value="">
+	   				<h:outputLabel value="Sexo: "/>
+	   					<f:selectItem itemLabel="-- Selecione --" noSelectionOption="true" />
+	   					<f:selectItem itemLabel="Masculino"/>
+	   					<f:selectItem itemLabel="Feminino"/>
+	   				</h:selectOneMenu>
+	   				
+	   				<h:outputLabel value="Nascimento: "/>
+	   				<h:inputText id="nasc_cadastro" value=""/>
+	   				
+	   			</h:panelGrid>
+	   		</h:form>
+	   	  </div>
    	</ui:define>
    </ui:composition>   
 </html> 
