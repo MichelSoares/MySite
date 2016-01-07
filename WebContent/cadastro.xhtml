@@ -59,20 +59,26 @@
 	   	  <div class="place-1">
 	   	  	<strong><h3><h:outputLabel value="Do que você gosta?"/></h3></strong>
 	   	  		<h:form>
-	   	  		<h:panelGrid id="grid_" columns="4" border="1" cellpadding="20">
+	   	  		<!-- <h:panelGrid id="grid_" columns="1" border="1" cellpadding="20"> -->
 	   	  			
-	   	  			<h:selectManyCheckbox value="">
-	   	  			  
-	   	  				<f:selectItem  itemValue="1" itemLabel="Programação" />
-	   	  				<f:selectItem  itemValue="2" itemLabel="Rede" />
-	   	  				<f:selectItem  itemValue="3" itemLabel="Internet" />
-	   	  				<f:selectItem  itemValue="4" itemLabel="Games e Consoles" />
-	   	  				<f:selectItem  itemValue="5" itemLabel="Mobilidade" />
+	   	  			<table border="1">	   	  			
+	   	  				<tr>
+	   	  				<h:selectManyCheckbox value="">
+	   	  				  <td><f:selectItem  itemValue="1" itemLabel="Programação" /></td>
+	   	  				  <td><f:selectItem  itemValue="2" itemLabel="Rede" /></td>
+	   	  				  <td><f:selectItem  itemValue="3" itemLabel="Internet" /></td>
+	   	  				  </h:selectManyCheckbox>
+	   	  				</tr>
 	   	  				
-	   	  			
-	   	  			</h:selectManyCheckbox>
-
-	   	  		</h:panelGrid>
+	   	  				<tr>
+	   	  				<h:selectManyCheckbox value="">
+	   	  				  <td><f:selectItem  itemValue="4" itemLabel="Games e Consoles" /></td>
+	   	  				  <td><f:selectItem  itemValue="5" itemLabel="Mobilidade" /></td>
+	   	  				  <td></td>
+	   	  				  </h:selectManyCheckbox>
+	   	  				</tr>
+	   	  			</table>
+	   	  		<!-- </h:panelGrid> -->
 	   	  	 </h:form>
 	   	  </div>
 	   	  
