@@ -58,27 +58,42 @@
 	   	  
 	   	  <div class="place-1">
 	   	  	<strong><h3><h:outputLabel value="Do que você gosta?"/></h3></strong>
+	   	  		
 	   	  		<h:form>
-	   	  		<!-- <h:panelGrid id="grid_" columns="1" border="1" cellpadding="20"> -->
-	   	  			
-	   	  			<table border="1">	   	  			
-	   	  				<tr>
-	   	  				<h:selectManyCheckbox value="">
-	   	  				  <td><f:selectItem  itemValue="1" itemLabel="Programação" /></td>
-	   	  				  <td><f:selectItem  itemValue="2" itemLabel="Rede" /></td>
-	   	  				  <td><f:selectItem  itemValue="3" itemLabel="Internet" /></td>
-	   	  				  </h:selectManyCheckbox>
-	   	  				</tr>
-	   	  				
-	   	  				<tr>
-	   	  				<h:selectManyCheckbox value="">
-	   	  				  <td><f:selectItem  itemValue="4" itemLabel="Games e Consoles" /></td>
-	   	  				  <td><f:selectItem  itemValue="5" itemLabel="Mobilidade" /></td>
-	   	  				  <td></td>
-	   	  				  </h:selectManyCheckbox>
-	   	  				</tr>
-	   	  			</table>
-	   	  		<!-- </h:panelGrid> -->
+	   	  		<table cellpadding="10" cellspacing="10" border="1" width="500px">
+			   	  			
+			   	  			<td>
+			   	  				<tr width="200px" height="10px" cellspacing="100px">
+				   	  			<h:selectManyCheckbox border="1">	
+				   	  				  <f:selectItem  itemValue="1" itemLabel="Programação" />
+				   	  				  <f:selectItem  itemValue="2" itemLabel="Rede" />
+				   	  				  <f:selectItem  itemValue="3" itemLabel="Internet" />
+				   	  		    </h:selectManyCheckbox>	
+				   	  		    </tr>
+				   	  		
+				   	  		    <tr width="200px" height="10px" cellspacing="100px">
+				   	  		    <h:selectManyCheckbox border="1">
+				   	  		    		<f:selectItem  itemValue="4" itemLabel="Games e Consoles" />
+				   	  				  	<f:selectItem  itemValue="5" itemLabel="Mobilidade" />
+				   	  				  	<f:selectItem  itemValue="6" itemLabel="Negócios"/>
+				   	  		    </h:selectManyCheckbox>	  
+				   	  		    </tr>
+				   	  		    <tr width="200px" height="10px" cellspacing="100px">
+				   	  		    <h:selectManyCheckbox border="1">
+				   	  		    		<f:selectItem  itemValue="7" itemLabel="Design" />
+				   	  				  	<f:selectItem  itemValue="8" itemLabel="Redes Sociais" />
+				   	  				  	<f:selectItem  itemValue="9" itemLabel="Carreira"/>
+				   	  		    </h:selectManyCheckbox>	
+				   	  		    </tr>
+				   	  		    <tr width="200px" height="10px" cellspacing="100px">
+				   	  		    <h:selectManyCheckbox border="1">
+				   	  		    		<f:selectItem  itemValue="10" itemLabel="Midia"/>
+				   	  		    		<f:selectItem  itemValue="11" itemLabel="Computação em Nuvem"/>
+				   	  		    		<f:selectItem  itemValue="12" itemLabel="Audio e Video"/>
+				   	  		    </h:selectManyCheckbox>
+				   	  		    </tr>
+				   	  	</td>  		   	  		
+	   	  		</table>
 	   	  	 </h:form>
 	   	  </div>
 	   	  
