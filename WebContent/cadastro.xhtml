@@ -60,7 +60,7 @@
 	   	  	<strong><h3><h:outputLabel value="Do que você gosta?"/></h3></strong>
 	   	  		
 	   	  		<h:form>
-	   	  		<table cellpadding="10" cellspacing="10" border="1" width="500px">
+	   	  		<table cellpadding="10" cellspacing="10" border="0" width="500px">
 			   	  			
 			   	  			<td>
 			   	  				<tr width="200px" height="10px" cellspacing="100px">
@@ -100,9 +100,22 @@
 	   	  <div class="place-1">
 	   	  	<strong><h3><h:outputLabel value="Ocupação?"/></h3></strong>
 	   	  		<h:form>
-	   	  		<h:panelGrid id="grid_" columns="4" border="0" cellpadding="10">
+	   	  		<h:panelGrid id="grid_" columns="1" border="0" cellpadding="10">
+	   	  			<h:outputLabel value="Estudando?"/>
+	   	  			<h:selectOneMenu>
+	   	  				<f:selectItem itemValue="		" />
+	   	  				<f:selectItem itemValue="Estou atualmente estudando na área de TI"/>
+	   	  				<f:selectItem itemValue="Estou atualmente estudando em outras áreas"/>
+	   	  				<f:selectItem itemValue="Não estou estudando atualmente"/>
+	   	  			</h:selectOneMenu>
 	   	  			
-
+	   	  			<h:outputLabel value="Trabalhando?"/>
+	   	  			<h:selectOneMenu>
+	   	  				<f:selectItem itemValue="		" />
+	   	  				<f:selectItem itemValue="Estou atualmente trabalhando na área de TI"/>
+	   	  				<f:selectItem itemValue="Estou atualmente trabalhando em outras áreas"/>
+	   	  				<f:selectItem itemValue="Não estou trabalhando atualmente"/>
+	   	  			</h:selectOneMenu>
 	   	  		</h:panelGrid>
 	   	  	 </h:form>
 	   	  </div>
@@ -110,8 +123,20 @@
 	   	  <div class="place-1">
 	   	  	<strong><h3><h:outputLabel value="Definir Credenciais"/></h3></strong>
 	   	  		<h:form>
-	   	  		<h:panelGrid id="grid_" columns="4" border="0" cellpadding="10">
+	   	  		<h:panelGrid id="grid_" columns="1" border="0" cellpadding="10">
+	   	  			<h:outputLabel value="Email: "/>
+	   	  			<h:inputText id="email" value="" />
 	   	  			
+	   	  			<h:outputLabel value="Senha: "/>
+	   	  			<h:inputText id="senha" value="" />
+	   	  			
+	   	  			<h:outputLabel value="Repetir Senha: "/>
+	   	  			<h:inputText id="repetiSenha" value="" />
+
+					<h:outputLabel value="Frase lembra Senha: "/>
+	   	  			<h:inputText id="fraseSenha" value="" />	
+	   	  			
+	   	  			<h:commandButton id="bt_salvar" value="Salvar" action="#"/>   	  			
 
 	   	  		</h:panelGrid>
 	   	  	 </h:form>
